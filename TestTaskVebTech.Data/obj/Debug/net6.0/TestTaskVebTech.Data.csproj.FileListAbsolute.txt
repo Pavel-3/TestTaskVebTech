@@ -1,0 +1,14 @@
+C:\Users\asdfg\source\repos\TestTaskVebTech\TestTaskVebTech.Data\bin\Debug\net6.0\TestTaskVebTech.Data.deps.json
+C:\Users\asdfg\source\repos\TestTaskVebTech\TestTaskVebTech.Data\bin\Debug\net6.0\TestTaskVebTech.Data.runtimeconfig.json
+C:\Users\asdfg\source\repos\TestTaskVebTech\TestTaskVebTech.Data\bin\Debug\net6.0\TestTaskVebTech.Data.dll
+C:\Users\asdfg\source\repos\TestTaskVebTech\TestTaskVebTech.Data\bin\Debug\net6.0\TestTaskVebTech.Data.pdb
+C:\Users\asdfg\source\repos\TestTaskVebTech\TestTaskVebTech.Data\obj\Debug\net6.0\TestTaskVebTech.Data.csproj.AssemblyReference.cache
+C:\Users\asdfg\source\repos\TestTaskVebTech\TestTaskVebTech.Data\obj\Debug\net6.0\TestTaskVebTech.Data.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\asdfg\source\repos\TestTaskVebTech\TestTaskVebTech.Data\obj\Debug\net6.0\TestTaskVebTech.Data.AssemblyInfoInputs.cache
+C:\Users\asdfg\source\repos\TestTaskVebTech\TestTaskVebTech.Data\obj\Debug\net6.0\TestTaskVebTech.Data.AssemblyInfo.cs
+C:\Users\asdfg\source\repos\TestTaskVebTech\TestTaskVebTech.Data\obj\Debug\net6.0\TestTaskVebTech.Data.csproj.CoreCompileInputs.cache
+C:\Users\asdfg\source\repos\TestTaskVebTech\TestTaskVebTech.Data\obj\Debug\net6.0\TestTaskVebTech.Data.dll
+C:\Users\asdfg\source\repos\TestTaskVebTech\TestTaskVebTech.Data\obj\Debug\net6.0\refint\TestTaskVebTech.Data.dll
+C:\Users\asdfg\source\repos\TestTaskVebTech\TestTaskVebTech.Data\obj\Debug\net6.0\TestTaskVebTech.Data.pdb
+C:\Users\asdfg\source\repos\TestTaskVebTech\TestTaskVebTech.Data\obj\Debug\net6.0\TestTaskVebTech.Data.genruntimeconfig.cache
+C:\Users\asdfg\source\repos\TestTaskVebTech\TestTaskVebTech.Data\obj\Debug\net6.0\ref\TestTaskVebTech.Data.dll
