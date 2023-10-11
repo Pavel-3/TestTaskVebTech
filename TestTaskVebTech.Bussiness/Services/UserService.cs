@@ -6,6 +6,11 @@ using TestTaskVebTech.Bussiness.Abstractions;
 using TestTaskVebTech.Data;
 using TestTaskVebTech.Data.DTOs;
 using TestTaskVebTech.Data.Entities;
+using System.Linq.Dynamic.Core;
+using Microsoft.EntityFrameworkCore.DynamicLinq;
+using static Microsoft.EntityFrameworkCore.DbLoggerCategory;
+using System.Runtime.ExceptionServices;
+using System.Linq;
 
 namespace TestTaskVebTech.Bussiness.Services
 {
@@ -29,73 +34,45 @@ namespace TestTaskVebTech.Bussiness.Services
             FiltDTO filt,
             SortDTO sort)
         {
-            //Func<User, bool> predicate = (user) => true;
-            //if (filt.MinAge != null)
-            //    predicate = (user) => (predicate(user) && (user.Age >= filt.MinAge));
-            //if (filt.MaxAge != null)
-            //    predicate = (user) => (predicate(user) && (user.Age <= filt.MaxAge));
-            //if (filt.UserName != null)
-            //    predicate = (user) => (predicate(user) && (user.Name.Contains(filt.UserName)));
-            //if (filt.Email != null)
-            //    predicate = (user) => (predicate(user) && (user.Email.Contains(filt.Email)));
-            //var roleEnums = new List<RoleName>();
-            //if (filt.Roles != null)
-            //{
-            //    foreach (var role in filt.Roles)
-            //    {
-            //        if (Enum.TryParse<RoleName>(role, true, out var roleEnum));
-            //            roleEnums.Add(roleEnum);
-            //    }
-            //    if (roleEnums.Any())
-            //        predicate = (user) => predicate(user) &&
-            //            user.Roles
-            //            .Select(role => role.Role)
-            //            .Any(role => roleEnums
-            //            .Contains(role.RoleName));
-            //}
             var properties = typeof(User).GetProperties();
-            Func<User, object?> orderByObject = (User user) => user.Id;
-            var propertyInfo = properties.FirstOrDefault(prop => prop.Name == sort.PropertyName);
-            if (propertyInfo != null)
+
+            var usersQuery = _context.Users.AsQueryable();
+            if (filt.MinAge != null)
+                usersQuery = usersQuery.Where(user => user.Age >= filt.MinAge);
+            if (filt.MaxAge != null)
+                usersQuery = usersQuery.Where(user => (user.Age <= filt.MaxAge));
+            if (!string.IsNullOrEmpty( filt.UserName))
+                usersQuery = usersQuery.Where(user => user.Name.Contains(filt.UserName));
+            if (!string.IsNullOrEmpty(filt.Email))
+                usersQuery = usersQuery.Where(user => user.Email.Contains(filt.Email));
+            var roleEnums = new List<RoleName>();
+            if (filt.Roles != null && filt.Roles.Any())
             {
-                orderByObject = user => propertyInfo.GetValue(user);
+                usersQuery = usersQuery.Where(u => u.RolesUsers
+                .Any(ru => filt.Roles
+                .Contains(ru.Role.RoleName.ToString())));
             }
 
-            var users = _context.Users.Select(user => user);
-            if (filt.MinAge != null)
-                users = users.Where(user => user.Age >= filt.MinAge);
-            if (filt.MaxAge != null)
-                users = users.Where(user => (user.Age <= filt.MaxAge));
-            if (filt.UserName != null)
-                users = users.Where(user => user.Name.Contains(filt.UserName));
-            if (filt.Email != null)
-                users = users.Where(user => user.Email.Contains(filt.Email));
-            var roleEnums = new List<RoleName>();
-            if (filt.Roles != null)
+            if (!string.IsNullOrEmpty(sort.PropertyName))
             {
-                foreach (var role in filt.Roles)
-                {
-                    if (Enum.TryParse<RoleName>(role, true, out var roleEnum)) ;
-                        roleEnums.Add(roleEnum);
-                }
-                if (roleEnums.Any())
-                {
-                    users = users.Where(user => user.Roles
-                        .Select(role => role.Role)
-                        .Any(role => roleEnums
-                        .Contains(role.RoleName)));
-                }
+                var newusers = sort.IsAscending ?
+                    usersQuery.OrderBy(sort.PropertyName) :
+                    usersQuery.OrderBy(sort.PropertyName + "desc");
             }
-            users = users.Include(user => user.Roles)
-                //.OrderBy(user => orderBy(user))
+            var users = await usersQuery
+                .Include(user => user.RolesUsers)
                 .Skip((pagination.CurrentPage - 1) * pagination.PageSize)
-                .Take(pagination.PageSize);
+                .Take(pagination.PageSize).ToListAsync();
             var userDTOs = new List<UserDTO>();
             foreach (var user in users)
             {
-                var roles = GetUserRoles(user);
+                var roles = _context.Roles
+                .Where(role => user.RolesUsers
+                .Select(role => role.RoleId)
+                .Contains(role.Id))
+                .Select(role => role.RoleName);
                 var userDTO = _mapper.Map<UserDTO>(user);
-                userDTO.Roles = roles;
+                userDTO.Roles = await roles.ToListAsync();
                 userDTOs.Add(userDTO);
             }
             return userDTOs;
@@ -104,24 +81,23 @@ namespace TestTaskVebTech.Bussiness.Services
         public async Task<UserDTO?> GetUserByIdAsync(int id)
         {
             var user = await _context.Users
-                .Include(user => user.Roles)
+                .Include(user => user.RolesUsers)
                 .FirstOrDefaultAsync(user => user.Id == id);
             if (user == null)
                 return null;
             var roles = GetUserRoles(user);
 
             var userDTO = _mapper.Map<UserDTO>(user);
-            userDTO.Roles = roles;
+            userDTO.Roles = roles.ToList();
             return userDTO;
         }
-        private List<RoleName> GetUserRoles(User user)
+        private IQueryable<RoleName> GetUserRoles(User user)
         {
             var roles = _context.Roles
-                .Where(role => user.Roles
+                .Where(role => user.RolesUsers
                 .Select(role => role.RoleId)
                 .Contains(role.Id))
-                .Select(role => role.RoleName)
-                .ToList();
+                .Select(role => role.RoleName);
             return roles;
         }
         public async Task<UserDTO?> AddRoleToUserAsync(int id, string roleString)
@@ -130,7 +106,8 @@ namespace TestTaskVebTech.Bussiness.Services
             {
                 throw new ArgumentException($"Role {roleString} not found");
             }
-            var user = await _context.Users.Include(user => user.Roles).FirstOrDefaultAsync(user => user.Id == id);
+            var user = await _context.Users.Include(user => user.RolesUsers)
+                .FirstOrDefaultAsync(user => user.Id == id);
             if (user == null)
             {
                 throw new ArgumentException("User not found");
@@ -140,7 +117,7 @@ namespace TestTaskVebTech.Bussiness.Services
             {
                 throw new DataException("Role not found");
             }
-            var roleUser = user.Roles.FirstOrDefault(roleUser => roleUser.RoleId == role.Id);
+            var roleUser = user.RolesUsers.FirstOrDefault(roleUser => roleUser.RoleId == role.Id);
             bool isRoleAssign = (roleUser != null);
             if (isRoleAssign)
             {

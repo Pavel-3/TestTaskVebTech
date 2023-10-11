@@ -19,7 +19,7 @@ namespace TestTaskVebTech.MappingProfiles
                 .ForMember(dest => dest.Roles, 
                 opt => opt.Ignore());
             CreateMap<UserDTO, User>()
-                .ForMember(dest => dest.Roles, 
+                .ForMember(dest => dest.RolesUsers, 
                 opt => opt.Ignore());
             CreateMap<UserDTO, UserResponse>()
                 .ForMember(dest => dest.Roles, 

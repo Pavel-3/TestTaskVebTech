@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "qs/QkBZXH16zsNNNlkqc23AjVIh98jGcycUKAejqKjC1qDMKdKN2FTtPWhuPoweXQWzBNCB9UM9HumsYThXbBw==",
+  "dgSpecHash": "JPGDu4e4EMf6C+sLkdi2g+stnYNOFsSyeZeSrrJayJp58jTZnwXioug8WT+Uhnf1hMKNEzs/e0JC0/XF4XZ2eg==",
   "success": true,
-  "projectFilePath": "C:\\Users\\asdfg\\source\\repos\\TestTaskVebTech\\TestTaskVebTech.Bussiness\\TestTaskVebTech.Bussiness.csproj",
+  "projectFilePath": "C:\\Users\\asdfg\\YandexDisk\\Учебники\\програмирование\\TestTask2\\TestTaskVebTech\\TestTaskVebTech.Bussiness\\TestTaskVebTech.Bussiness.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\asdfg\\.nuget\\packages\\automapper\\12.0.1\\automapper.12.0.1.nupkg.sha512",
     "C:\\Users\\asdfg\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\12.0.1\\automapper.extensions.microsoft.dependencyinjection.12.0.1.nupkg.sha512",
@@ -15,6 +15,7 @@
     "C:\\Users\\asdfg\\.nuget\\packages\\microsoft.entityframeworkcore\\7.0.11\\microsoft.entityframeworkcore.7.0.11.nupkg.sha512",
     "C:\\Users\\asdfg\\.nuget\\packages\\microsoft.entityframeworkcore.abstractions\\7.0.11\\microsoft.entityframeworkcore.abstractions.7.0.11.nupkg.sha512",
     "C:\\Users\\asdfg\\.nuget\\packages\\microsoft.entityframeworkcore.analyzers\\7.0.11\\microsoft.entityframeworkcore.analyzers.7.0.11.nupkg.sha512",
+    "C:\\Users\\asdfg\\.nuget\\packages\\microsoft.entityframeworkcore.dynamiclinq\\7.3.5\\microsoft.entityframeworkcore.dynamiclinq.7.3.5.nupkg.sha512",
     "C:\\Users\\asdfg\\.nuget\\packages\\microsoft.entityframeworkcore.relational\\7.0.11\\microsoft.entityframeworkcore.relational.7.0.11.nupkg.sha512",
     "C:\\Users\\asdfg\\.nuget\\packages\\microsoft.entityframeworkcore.sqlserver\\7.0.11\\microsoft.entityframeworkcore.sqlserver.7.0.11.nupkg.sha512",
     "C:\\Users\\asdfg\\.nuget\\packages\\microsoft.extensions.caching.abstractions\\7.0.0\\microsoft.extensions.caching.abstractions.7.0.0.nupkg.sha512",
@@ -43,6 +44,8 @@
     "C:\\Users\\asdfg\\.nuget\\packages\\system.drawing.common\\6.0.0\\system.drawing.common.6.0.0.nupkg.sha512",
     "C:\\Users\\asdfg\\.nuget\\packages\\system.formats.asn1\\5.0.0\\system.formats.asn1.5.0.0.nupkg.sha512",
     "C:\\Users\\asdfg\\.nuget\\packages\\system.identitymodel.tokens.jwt\\6.24.0\\system.identitymodel.tokens.jwt.6.24.0.nupkg.sha512",
+    "C:\\Users\\asdfg\\.nuget\\packages\\system.linq.dynamic\\1.0.8\\system.linq.dynamic.1.0.8.nupkg.sha512",
+    "C:\\Users\\asdfg\\.nuget\\packages\\system.linq.dynamic.core\\1.3.5\\system.linq.dynamic.core.1.3.5.nupkg.sha512",
     "C:\\Users\\asdfg\\.nuget\\packages\\system.memory\\4.5.4\\system.memory.4.5.4.nupkg.sha512",
     "C:\\Users\\asdfg\\.nuget\\packages\\system.memory.data\\1.0.2\\system.memory.data.1.0.2.nupkg.sha512",
     "C:\\Users\\asdfg\\.nuget\\packages\\system.numerics.vectors\\4.5.0\\system.numerics.vectors.4.5.0.nupkg.sha512",
@@ -61,5 +64,16 @@
     "C:\\Users\\asdfg\\.nuget\\packages\\system.threading.tasks.extensions\\4.5.4\\system.threading.tasks.extensions.4.5.4.nupkg.sha512",
     "C:\\Users\\asdfg\\.nuget\\packages\\system.windows.extensions\\6.0.0\\system.windows.extensions.6.0.0.nupkg.sha512"
   ],
-  "logs": []
+  "logs": [
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Package 'System.Linq.Dynamic 1.0.8' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1' instead of the project target framework 'net6.0'. This package may not be fully compatible with your project.",
+      "libraryId": "System.Linq.Dynamic",
+      "targetGraphs": [
+        "net6.0"
+      ]
+    }
+  ]
 }

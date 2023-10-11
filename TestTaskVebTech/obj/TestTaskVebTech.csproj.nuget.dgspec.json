@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\asdfg\\source\\repos\\TestTaskVebTech\\TestTaskVebTech\\TestTaskVebTech.csproj": {}
+    "C:\\Users\\asdfg\\YandexDisk\\Учебники\\програмирование\\TestTask2\\TestTaskVebTech\\TestTaskVebTech\\TestTaskVebTech.csproj": {}
   },
   "projects": {
-    "C:\\Users\\asdfg\\source\\repos\\TestTaskVebTech\\TestTaskVebTech.Bussiness\\TestTaskVebTech.Bussiness.csproj": {
+    "C:\\Users\\asdfg\\YandexDisk\\Учебники\\програмирование\\TestTask2\\TestTaskVebTech\\TestTaskVebTech.Bussiness\\TestTaskVebTech.Bussiness.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\asdfg\\source\\repos\\TestTaskVebTech\\TestTaskVebTech.Bussiness\\TestTaskVebTech.Bussiness.csproj",
+        "projectUniqueName": "C:\\Users\\asdfg\\YandexDisk\\Учебники\\програмирование\\TestTask2\\TestTaskVebTech\\TestTaskVebTech.Bussiness\\TestTaskVebTech.Bussiness.csproj",
         "projectName": "TestTaskVebTech.Bussiness",
-        "projectPath": "C:\\Users\\asdfg\\source\\repos\\TestTaskVebTech\\TestTaskVebTech.Bussiness\\TestTaskVebTech.Bussiness.csproj",
+        "projectPath": "C:\\Users\\asdfg\\YandexDisk\\Учебники\\програмирование\\TestTask2\\TestTaskVebTech\\TestTaskVebTech.Bussiness\\TestTaskVebTech.Bussiness.csproj",
         "packagesPath": "C:\\Users\\asdfg\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\asdfg\\source\\repos\\TestTaskVebTech\\TestTaskVebTech.Bussiness\\obj\\",
+        "outputPath": "C:\\Users\\asdfg\\YandexDisk\\Учебники\\програмирование\\TestTask2\\TestTaskVebTech\\TestTaskVebTech.Bussiness\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -32,8 +32,8 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "C:\\Users\\asdfg\\source\\repos\\TestTaskVebTech\\TestTaskVebTech.Data\\TestTaskVebTech.Data.csproj": {
-                "projectPath": "C:\\Users\\asdfg\\source\\repos\\TestTaskVebTech\\TestTaskVebTech.Data\\TestTaskVebTech.Data.csproj"
+              "C:\\Users\\asdfg\\YandexDisk\\Учебники\\програмирование\\TestTask2\\TestTaskVebTech\\TestTaskVebTech.Data\\TestTaskVebTech.Data.csproj": {
+                "projectPath": "C:\\Users\\asdfg\\YandexDisk\\Учебники\\програмирование\\TestTask2\\TestTaskVebTech\\TestTaskVebTech.Data\\TestTaskVebTech.Data.csproj"
               }
             }
           }
@@ -51,6 +51,18 @@
             "AutoMapper": {
               "target": "Package",
               "version": "[12.0.1, )"
+            },
+            "Microsoft.EntityFrameworkCore.DynamicLinq": {
+              "target": "Package",
+              "version": "[7.3.5, )"
+            },
+            "System.Linq.Dynamic": {
+              "target": "Package",
+              "version": "[1.0.8, )"
+            },
+            "System.Linq.Dynamic.Core": {
+              "target": "Package",
+              "version": "[1.3.5, )"
             }
           },
           "imports": [
@@ -73,14 +85,14 @@
         }
       }
     },
-    "C:\\Users\\asdfg\\source\\repos\\TestTaskVebTech\\TestTaskVebTech.Data\\TestTaskVebTech.Data.csproj": {
+    "C:\\Users\\asdfg\\YandexDisk\\Учебники\\програмирование\\TestTask2\\TestTaskVebTech\\TestTaskVebTech.Data\\TestTaskVebTech.Data.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\asdfg\\source\\repos\\TestTaskVebTech\\TestTaskVebTech.Data\\TestTaskVebTech.Data.csproj",
+        "projectUniqueName": "C:\\Users\\asdfg\\YandexDisk\\Учебники\\програмирование\\TestTask2\\TestTaskVebTech\\TestTaskVebTech.Data\\TestTaskVebTech.Data.csproj",
         "projectName": "TestTaskVebTech.Data",
-        "projectPath": "C:\\Users\\asdfg\\source\\repos\\TestTaskVebTech\\TestTaskVebTech.Data\\TestTaskVebTech.Data.csproj",
+        "projectPath": "C:\\Users\\asdfg\\YandexDisk\\Учебники\\програмирование\\TestTask2\\TestTaskVebTech\\TestTaskVebTech.Data\\TestTaskVebTech.Data.csproj",
         "packagesPath": "C:\\Users\\asdfg\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\asdfg\\source\\repos\\TestTaskVebTech\\TestTaskVebTech.Data\\obj\\",
+        "outputPath": "C:\\Users\\asdfg\\YandexDisk\\Учебники\\програмирование\\TestTask2\\TestTaskVebTech\\TestTaskVebTech.Data\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -148,6 +160,14 @@
               "suppressParent": "All",
               "target": "Package",
               "version": "[7.0.11, )"
+            },
+            "System.Linq.Dynamic": {
+              "target": "Package",
+              "version": "[1.0.8, )"
+            },
+            "System.Linq.Dynamic.Core": {
+              "target": "Package",
+              "version": "[1.3.5, )"
             }
           },
           "imports": [
@@ -170,14 +190,14 @@
         }
       }
     },
-    "C:\\Users\\asdfg\\source\\repos\\TestTaskVebTech\\TestTaskVebTech\\TestTaskVebTech.csproj": {
+    "C:\\Users\\asdfg\\YandexDisk\\Учебники\\програмирование\\TestTask2\\TestTaskVebTech\\TestTaskVebTech\\TestTaskVebTech.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\asdfg\\source\\repos\\TestTaskVebTech\\TestTaskVebTech\\TestTaskVebTech.csproj",
+        "projectUniqueName": "C:\\Users\\asdfg\\YandexDisk\\Учебники\\програмирование\\TestTask2\\TestTaskVebTech\\TestTaskVebTech\\TestTaskVebTech.csproj",
         "projectName": "TestTaskVebTech",
-        "projectPath": "C:\\Users\\asdfg\\source\\repos\\TestTaskVebTech\\TestTaskVebTech\\TestTaskVebTech.csproj",
+        "projectPath": "C:\\Users\\asdfg\\YandexDisk\\Учебники\\програмирование\\TestTask2\\TestTaskVebTech\\TestTaskVebTech\\TestTaskVebTech.csproj",
         "packagesPath": "C:\\Users\\asdfg\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\asdfg\\source\\repos\\TestTaskVebTech\\TestTaskVebTech\\obj\\",
+        "outputPath": "C:\\Users\\asdfg\\YandexDisk\\Учебники\\програмирование\\TestTask2\\TestTaskVebTech\\TestTaskVebTech\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -198,11 +218,11 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "C:\\Users\\asdfg\\source\\repos\\TestTaskVebTech\\TestTaskVebTech.Bussiness\\TestTaskVebTech.Bussiness.csproj": {
-                "projectPath": "C:\\Users\\asdfg\\source\\repos\\TestTaskVebTech\\TestTaskVebTech.Bussiness\\TestTaskVebTech.Bussiness.csproj"
+              "C:\\Users\\asdfg\\YandexDisk\\Учебники\\програмирование\\TestTask2\\TestTaskVebTech\\TestTaskVebTech.Bussiness\\TestTaskVebTech.Bussiness.csproj": {
+                "projectPath": "C:\\Users\\asdfg\\YandexDisk\\Учебники\\програмирование\\TestTask2\\TestTaskVebTech\\TestTaskVebTech.Bussiness\\TestTaskVebTech.Bussiness.csproj"
               },
-              "C:\\Users\\asdfg\\source\\repos\\TestTaskVebTech\\TestTaskVebTech.Data\\TestTaskVebTech.Data.csproj": {
-                "projectPath": "C:\\Users\\asdfg\\source\\repos\\TestTaskVebTech\\TestTaskVebTech.Data\\TestTaskVebTech.Data.csproj"
+              "C:\\Users\\asdfg\\YandexDisk\\Учебники\\програмирование\\TestTask2\\TestTaskVebTech\\TestTaskVebTech.Data\\TestTaskVebTech.Data.csproj": {
+                "projectPath": "C:\\Users\\asdfg\\YandexDisk\\Учебники\\програмирование\\TestTask2\\TestTaskVebTech\\TestTaskVebTech.Data\\TestTaskVebTech.Data.csproj"
               }
             }
           }
@@ -244,6 +264,14 @@
             "Swashbuckle.AspNetCore": {
               "target": "Package",
               "version": "[6.5.0, )"
+            },
+            "System.Linq.Dynamic": {
+              "target": "Package",
+              "version": "[1.0.8, )"
+            },
+            "System.Linq.Dynamic.Core": {
+              "target": "Package",
+              "version": "[1.3.5, )"
             }
           },
           "imports": [

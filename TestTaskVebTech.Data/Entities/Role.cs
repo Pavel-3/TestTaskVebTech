@@ -10,7 +10,7 @@ namespace TestTaskVebTech.Data.Entities
     {
         public int Id { get; set; }
         public RoleName RoleName { get; set; }
-        public List<RoleUser> Users { get; set; }
+        public List<RoleUser> UsersRoles { get; set; }
     }
 
     public enum RoleName

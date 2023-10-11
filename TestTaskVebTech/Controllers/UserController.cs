@@ -53,7 +53,8 @@ namespace TestTaskVebTech.Controllers
         {
             try
             {
-                var user = _mapper.Map<UserResponse>(await _userService.GetUserByIdAsync(Id));
+                var userDTO = await _userService.GetUserByIdAsync(Id);
+                var user = _mapper.Map<UserResponse>(userDTO);
                 if (user == null)
                     return NotFound();
                 return Ok(user);
